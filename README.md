@@ -29,6 +29,11 @@ git clone https://github.com
 cd security-telemetry-anomaly-engine
 python threat_clustering_engine.py
 ```
+## 📂 Repository Structure
+
+* `documents`: high_risk_security_alerts.csv 
+* `notebook`: threat_clustering_engine.ipynb 
+* `scripts`: threat_clustering_engine.py 
 
 ## 📈 Security Insights & Cluster Profiling
 When executed, the engine automatically profiles network behavior into three clean diagnostic segments:
@@ -36,5 +41,5 @@ When executed, the engine automatically profiles network behavior into three cle
 - **Cluster 1 (Brute-Force Vector):** Spikes in sequential access failure events with standard data usage. Indicates probable credential-stuffing or dictionary attacks.
 - **Cluster 2 (Exfiltration Vector):** High data volume payloads paired with anomalous system events. Indicates potential insider threats or compromised service accounts moving enterprise assets out of the network footprint.
 
-## 📂 Expected Output Artifacts
+##  Expected Output Artifacts
 - `high_risk_security_alerts.csv`: A highly structured, filtered log file listing every session identifier flagged as an infrastructure anomaly for automated ingestion into a SIEM platform.
