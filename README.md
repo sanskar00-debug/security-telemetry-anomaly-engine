@@ -31,9 +31,9 @@ python threat_clustering_engine.py
 ```
 ## 📂 Repository Structure
 
-* `documents`: high_risk_security_alerts.csv .
-* `notebook`: threat_clustering_engine.ipynb .
-* `scripts`: threat_clustering_engine.py .
+* `documents`: high_risk_security_alerts.csv 
+* `notebook`: threat_clustering_engine.ipynb 
+* `scripts`: threat_clustering_engine.py 
 
 ## 📈 Security Insights & Cluster Profiling
 When executed, the engine automatically profiles network behavior into three clean diagnostic segments:
