@@ -6,8 +6,8 @@ This repository contains a production-ready, data-driven security engine designe
 The project isolates messy infrastructure telemetry feeds, calculates distance-based threat metrics, and automatically outputs a triage-ready tracking log (`high_risk_security_alerts.csv`) tailored for Tier 1 Security Operations Center (SOC) review.
 
 ## 🛠️ Technical Stack & Tools
-- **Language:** ![Python](https://img.shields.io/badge/python-%233670A0.svg?style=for-the-badge&logo=python&logoColor=ffdd54) **Python 3.x**.
-- **Data Engineering & Preprocessing:** ![Pandas](https://img.shields.io/badge/Pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white), ![NumPy](https://img.shields.io/badge/NumPy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white), ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white).
+- **Language:** ![Python](https://img.shields.io/badge/python-%233670A0.svg?style=flat-square&logo=python&logoColor=ffdd54) **Python 3.x**.
+- **Data Engineering & Preprocessing:** ![Pandas](https://img.shields.io/badge/Pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white), ![NumPy](https://img.shields.io/badge/NumPy-%23013243.svg?style=flat-square&logo=numpy&logoColor=white), ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=flat-square&logo=scikit-learn&logoColor=white).
 - **Machine Learning Engine:** Scikit-Learn (K-Means Clustering)
 - **Data Pipeline Analytics:** Integrated Relational Database / Flat CSV Exports
 
