@@ -73,17 +73,17 @@ The **Security Telemetry Anomaly Detection & Threat Clustering Engine** is an un
 ---
 ## 📁 Repository Structure
 
+
 security-telemetry-anomaly-engine/
 ├── documents/
-│   └── high_risk_security_alerts.csv   #Filtered SOC triage alert artifact
+│   └── high_risk_security_alerts.csv
 ├── notebook/
-│   └── threat_clustering_engine.ipynb  #Interactive EDA, elbow method & visual clustering
+│   └── threat_clustering_engine.ipynb  
 ├── scripts/
-│   └── threat_clustering_engine.py     #Production CLI pipeline script
-├── requirements.txt                    #Project dependency manifest
-├── LICENSE                             #MITLicense
-└── README.md                           #Documentation
-
+│   └── threat_clustering_engine.py
+├── requirements.txt    
+├── LICENSE                             
+└── README.md                           
 
 ---
 
