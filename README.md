@@ -1,45 +1,96 @@
-# Security Telemetry Anomaly Detection & Threat Clustering Engine 🔒
+<div align="center">
 
-## 📌 Project Overview
-This repository contains a production-ready, data-driven security engine designed to identify network infrastructure threats and anomalous user behavior. Using unsupervised machine learning (**K-Means Clustering**), the pipeline processes raw authentication telemetry logs, establishes normal system behavioral baselines, and isolates high-risk anomalies (such as brute-force access profiles and data exfiltration attempts) without requiring predefined manual signatures.
+# 🔒 Security Telemetry Anomaly Detection & Threat Clustering Engine
 
-The project isolates messy infrastructure telemetry feeds, calculates distance-based threat metrics, and automatically outputs a triage-ready tracking log (`high_risk_security_alerts.csv`) tailored for Tier 1 Security Operations Center (SOC) review.
+[![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Scikit-Learn](https://img.shields.io/badge/scikit--learn-F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+[![Pandas](https://img.shields.io/badge/pandas-150458.svg?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-sanskar00--debug-black?style=for-the-badge&logo=github)](https://github.com/sanskar00-debug/security-telemetry-anomaly-engine)
 
-## 🛠️ Technical Stack & Tools
-- **Language:** Python 3.x
-- **Data Engineering & Preprocessing:** Pandas, NumPy, Scikit-Learn (StandardScaler)
-- **Machine Learning Engine:** Scikit-Learn (K-Means Clustering)
-- **Data Pipeline Analytics:** Integrated Relational Database / Flat CSV Exports
+<p align="center">
+  <b>Unsupervised machine learning engine for real-time authentication telemetry anomaly detection, behavioral threat profiling, and automated SOC incident alert generation.</b>
+</p>
 
-## 📊 Core Architecture Flow
-1. **Telemetry Ingestion:** Simulates multi-server event logs tracking key operational security variables: failed login counts and payload volume velocity (MB).
-2. **Feature Scaler Matrix:** Utilizes Z-score standardization (`StandardScaler`) to neutralize magnitude differences between access frequency constraints and raw data payloads.
-3. **Behavioral Clustering Engine:** Deploys a distance-optimized K-Means model to partition log sessions into distinct tactical risk categories.
-4. **Programmatic Triage:** Evaluates cluster centers to isolate the highest-risk data vectors and auto-generates a SOC incident alert file.
+[Key Features](#-key-features) • [Architecture Flow](#-core-architecture--data-pipeline) • [Quick Start](#-quick-start) • [Cluster Profiles](#-security-insights--cluster-profiling) • [Output Artifacts](#-output-artifacts)
 
-## 🚀 How to Run the Threat Engine
-Ensure you have the required packages installed:
-```bash
-pip install pandas numpy scikit-learn matplotlib
+</div>
+
+---
+
+## 📌 Executive Summary
+
+Modern Security Operations Centers (SOCs) encounter extreme alert fatigue from rule-based alert engines that struggle to differentiate standard user variations from novel, low-and-slow cyberattacks. 
+
+The **Security Telemetry Anomaly Detection & Threat Clustering Engine** is an unsupervised machine learning pipeline designed to profile multi-dimensional infrastructure telemetry. By deploying feature-standardized **K-Means clustering**, the system learns normative operational baselines directly from raw system event streams, automatically isolating high-risk outliers—such as distributed credential stuffing (brute-force) and high-throughput data exfiltration—without reliance on static, signature-based detection rules.
+
+---
+
+## ✨ Key Features
+
+- **Unsupervised Anomaly Isolation:** Requires zero labeled attack data, making it resilient to zero-day and modified attack vectors.
+- **Robust Feature Normalization:** Mitigates scalar dominance between discrete authentication counters (failed logins) and continuous data streams (payload transfer in MB) using `StandardScaler`.
+- **Automated Behavioral Clustering:** Partitions multi-server session telemetry into statistically separate operational risk cohorts using an optimized Euclidean distance metric.
+- **Tier 1 SOC Ready Output:** Automatically exports critical anomalies into an actionable incident triage file (`high_risk_security_alerts.csv`), formatted for ingestion into SIEM platforms (Splunk, Elastic, Sentinel).
+
+---
+
+## 📊 Core Architecture & Data Pipeline
+
+```text
+[ Raw Telemetry Ingestion ]
+    │ (Failed Logins, Session Duration, Payload Velocity MB)
+    ▼
+[ Feature Engineering & Preprocessing ]
+    │ (StandardScaler Z-Score Normalization)
+    ▼
+[ K-Means Threat Clustering Engine ]
+    │ (Euclidean Distance Matrix / Inertia Optimization)
+    ▼
+[ Automated Risk Profiling & Diagnostic Triage ]
+    ├──► Cluster 0: Authorized Baseline Operations (90-95%)
+    ├──► Cluster 1: Brute-Force & Credential Access Spikes
+    └──► Cluster 2: Anomalous Data Exfiltration Vector
+            │
+            ▼
+[ Automated Alert Generator: high_risk_security_alerts.csv ]
+
 ```
+---
+## 🛠️ Technical Stack
 
-Clone the repository and execute the security diagnostics engine:
-```bash
-git clone https://github.com
-cd security-telemetry-anomaly-engine
-python threat_clustering_engine.py
-```
-## 📂 Repository Structure
+- **Core Runtime:** Python 3.9+
 
-* `documents`: high_risk_security_alerts.csv 
-* `notebook`: threat_clustering_engine.ipynb 
-* `scripts`: threat_clustering_engine.py 
+- **Data Engineering:** pandas, numpy
 
-## 📈 Security Insights & Cluster Profiling
-When executed, the engine automatically profiles network behavior into three clean diagnostic segments:
-- **Cluster 0 (Baseline Operations):** Low failed login frequencies, standard data transfer volumes. Represents legitimate, authorized corporate usage patterns.
-- **Cluster 1 (Brute-Force Vector):** Spikes in sequential access failure events with standard data usage. Indicates probable credential-stuffing or dictionary attacks.
-- **Cluster 2 (Exfiltration Vector):** High data volume payloads paired with anomalous system events. Indicates potential insider threats or compromised service accounts moving enterprise assets out of the network footprint.
+- **Machine Learning & Feature Scaling:** scikit-learn (StandardScaler, KMeans)
 
-##  Expected Output Artifacts
-- `high_risk_security_alerts.csv`: A highly structured, filtered log file listing every session identifier flagged as an infrastructure anomaly for automated ingestion into a SIEM platform.
+- **Data Visualization & Profiling:** matplotlib, seaborn
+
+- **Execution Environments:** CLI automation script (.py), interactive exploratory analysis (.ipynb)
+---
+
+---
+## 📁 Repository Structure
+
+security-telemetry-anomaly-engine/
+├── documents/
+│   └── high_risk_security_alerts.csv   # Filtered SOC triage alert artifact
+├── notebook/
+│   └── threat_clustering_engine.ipynb  # Interactive EDA, elbow method & visual clustering
+├── scripts/
+│   └── threat_clustering_engine.py     # Production CLI pipeline script
+├── requirements.txt                    # Project dependency manifest
+├── LICENSE                             # MIT License
+└── README.md                           # Documentation
+
+---
+
+---
+
+## 📄 Output Artifacts
+Upon execution, the script generates a triage log under documents/high_risk_security_alerts.csv:
+
+session_id,source_ip,failed_logins,payload_mb,assigned_cluster,risk_level
+sess_9021,192.168.1.104,24,12.4,1,HIGH_RISK_BRUTE_FORCE
+sess_4412,10.0.4.52,1,4210.8,2,CRITICAL_EXFILTRATION
