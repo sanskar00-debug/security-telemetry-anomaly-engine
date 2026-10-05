@@ -77,12 +77,17 @@ The **Security Telemetry Anomaly Detection & Threat Clustering Engine** is an un
 security-telemetry-anomaly-engine/
 ├── documents/
 │   └── high_risk_security_alerts.csv
+
 ├── notebook/
 │   └── threat_clustering_engine.ipynb  
+
 ├── scripts/
 │   └── threat_clustering_engine.py
+
 ├── requirements.txt    
-├── LICENSE                             
+
+├── LICENSE       
+
 └── README.md                           
 
 ---
