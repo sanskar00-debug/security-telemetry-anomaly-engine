@@ -12,7 +12,7 @@
   <b>Unsupervised machine learning engine for real-time authentication telemetry anomaly detection, behavioral threat profiling, and automated SOC incident alert generation.</b>
 </p>
 
-[Key Features](#-key-features) • [Architecture Flow](#-core-architecture--data-pipeline) • [Quick Start](#-quick-start) • [Cluster Profiles](#-security-insights--cluster-profiling) • [Output Artifacts](#-output-artifacts)
+[Key Features](#-key-features) • [Architecture Flow](#-core-architecture--data-pipeline) • [Output Artifacts](#-output-artifacts)
 
 </div>
 
@@ -83,7 +83,6 @@ security-telemetry-anomaly-engine/
 ├── requirements.txt                    # Project dependency manifest
 ├── LICENSE                             # MIT License
 └── README.md                           # Documentation
-
 ---
 
 ---
