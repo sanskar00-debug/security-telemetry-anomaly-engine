@@ -12,7 +12,7 @@
   <b>Unsupervised machine learning engine for real-time authentication telemetry anomaly detection, behavioral threat profiling, and automated SOC incident alert generation.</b>
 </p>
 
-[Key Features](#-key-features) • [Architecture Flow](#-core-architecture--data-pipeline) • [Quick Start](#-quick-start) • [Cluster Profiles](#-security-insights--cluster-profiling) • [Output Artifacts](#-output-artifacts)
+[Key Features](#-key-features) • [Architecture Flow](#-core-architecture--data-pipeline) • [Output Artifacts](#-output-artifacts)
 
 </div>
 
@@ -73,24 +73,32 @@ The **Security Telemetry Anomaly Detection & Threat Clustering Engine** is an un
 ---
 ## 📁 Repository Structure
 
+
 security-telemetry-anomaly-engine/
 ├── documents/
-│   └── high_risk_security_alerts.csv   # Filtered SOC triage alert artifact
+│   └── high_risk_security_alerts.csv
+
 ├── notebook/
-│   └── threat_clustering_engine.ipynb  # Interactive EDA, elbow method & visual clustering
+│   └── threat_clustering_engine.ipynb  
+
 ├── scripts/
-│   └── threat_clustering_engine.py     # Production CLI pipeline script
-├── requirements.txt                    # Project dependency manifest
-├── LICENSE                             # MIT License
-└── README.md                           # Documentation
+│   └── threat_clustering_engine.py
+
+├── requirements.txt    
+
+├── LICENSE       
+
+└── README.md                           
 
 ---
+
 
 ---
 
 ## 📄 Output Artifacts
+
 Upon execution, the script generates a triage log under documents/high_risk_security_alerts.csv:
 
-session_id,source_ip,failed_logins,payload_mb,assigned_cluster,risk_level
-sess_9021,192.168.1.104,24,12.4,1,HIGH_RISK_BRUTE_FORCE
-sess_4412,10.0.4.52,1,4210.8,2,CRITICAL_EXFILTRATION
+session_id,source_ip,failed_logins,payload_mb,assigned_cluster,risk_level.
+sess_9021,192.168.1.104,24,12.4,1,HIGH_RISK_BRUTE_FORCE.
+sess_4412,10.0.4.52,1,4210.8,2,CRITICAL_EXFILTRATION.
